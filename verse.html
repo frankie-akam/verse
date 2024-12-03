@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A platform for sharing heartfelt messages, romantic notes, or inspiring wishes. No account needed, it's user-friendly, just verify you're human! Yoh! Verse it, you know!">
+    <meta name="keywords" content="Verse, heartfelt messages, romantic notes, inspiring wishes, sharing platform, no account needed, user-friendly, verify human">
+    <meta name="author" content="Franklyn Akam">
+
+    <title>Yoh! Verse it, You Know!</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="icon" href="images/VERSE favicon.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="images/favicon-32x32.png"> 
+    <link rel="icon" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" sizes="64x64" href="images/favicon-64x64.png">
+    <link rel="icon" sizes="128x128" href="images/favicon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180.png">
+
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header id="header">
+        <div class="verse-logo">
+            <!-- <a href="about.html"><img src="images/VERSE transparent logo white.png" alt="Verse Logo"></a>  -->
+            <a href="about.html"><span class="verse-logo-top-text">VERSE<i class="fa-solid fa-quote-right"></i></span></a> 
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="topics.html">Topics <i class="fa-solid fa-layer-group"></i> </a></li>
+                    <li><a href="tags.html">Tags <i class="fa-solid fa-tags"></i> </a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    
+    <!-- Main section -->
+    <main id="main">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-top">
+                <li>Verse of the Day</li>
+                <p>"A verse a day keeps the worries away."</p>
+                <blockquote class="blockquote">
+                    <p>“Some persons will never like you because your spirit irritates their demons.”</p>
+                    <footer>— Denzel Washington</footer>
+                </blockquote>
+
+                <li>Yesterday's Words</li>
+                <p>"Yesterday's wisdom fuels today's growth."</p>
+                <blockquote class="blockquote">
+                    <p>"If you can't fly, then run. If you can't run, then walk. If you can't walk, then crawl, but by all means, keep moving"</p>
+                    <footer>Martin Luther King Jr.</footer>
+                </blockquote>
+
+                <li>Featured Verser</li>
+                <p>"Recognizing the verser who inspired the community."</p>
+                <blockquote class="blockquote">
+                    <p>“May your code be bug-free, your coffee or tea mug be full and your loops always end in the right condition.”</p>
+                    <footer>— Franklyn Akam</footer>
+                </blockquote>
+
+                <li>Versers' Choice</li>
+                <p>"A pick of the community's favorite verse."</p>
+                <blockquote class="blockquote">
+                    <p>“Did you know a smile can heal? In every moment, come what may, remember this - You're amazing when you smile.”</p>
+                    <footer>— Etima Paul</footer>
+                </blockquote>
+
+                <li>Trending Topics</li>
+                <p>"Explore the most talked-about verses today."</p>
+                <blockquote class="blockquote">
+                    <p>“If Donald Trump wins, we do have an opportunity to do kind of a once in a lifetime deregulation and reduction in the size of the government.”</p>
+                    <footer>— Elon Musk</footer>
+                </blockquote>
+            </ul>
+
+            <hr>
+
+            <!-- Verse socials -->
+            <div class="sidebar-socials">
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+
+            <ul class="sidebar-footer">
+                <li><a href="about.html">About</a></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+
+        </aside>
+        
+        <!-- Share your verse section -->
+        <div class="verse-container">
+            <div class="verse-box">
+                <h2>Have you got a verse? Share it!</h2>
+                
+                <!-- User photo upload -->
+                <div class="photo-upload-wrapper">
+                    <input type="file" id="user-photo" accept=".jpeg, .png, .jpg" required>
+                    <label for="user-photo" class="user-photo-label">
+                        <div class="user-upload-box">
+                            <i class="fa fa-camera"></i> 
+                        </div>
+                    </label>
+                    <div id="photo-preview"></div>
+                </div>
+
+                <!-- Input for user name -->
+                <div class="input-wrapper">
+                    <input type="text" id="username-input" placeholder="Enter your name" required>
+                    <i class="fa fa-user"></i>
+                </div>
+            
+                <!-- Textarea for verse with character count -->
+                <div class="textarea-wrapper">
+                    <textarea id="verse-input" placeholder="Share your verse here..." rows="5" maxlength="300" required></textarea>
+                    <span id="char-counter">0/300</span>
+                </div>
+            
+                <!-- Post button -->
+                <button id="post-verse-btn" disabled>Post Verse</button>
+            </div>
+
+            <!-- Display Posted Verses -->
+            <div id="verse-display" class="verse-display">
+                <h3>Shared Verses</h3>
+                <div id="verses-container"></div>
+            </div>
+        </div>  
+
+        <!-- Ad sidebar-->
+        <aside class="ad-sidebar">
+            <blockquote class="ad-blockquote">
+                    <ul class="ad-sidebar-top">
+                        <li>Smart ChatGPT with Web Access</li>
+                    </ul>
+
+                    <p>Write articles, AI painting, read
+                        articles & PDFs, summarize videos,
+                        enhance searches.
+                    </p>
+                    
+                    <a href="https://sider.ai/apps/lp-chatgpt?source=gg&p1=ai&p2=display&gad_source=5&gclid=EAIaIQobChMImaL2kra0iQMVsB1oCB1aBxlCEAEYASAAEgJ3gvD_BwE" target="_blank"><button>Open</button>
+                    </a>
+            </blockquote>
+                        
+            <blockquote class="ad-blockquote">
+                    <ul class="ad-sidebar-top">
+                        <li>NEED TO EARN IN DOLLARS - but don't know where to start?</li>
+                    </ul>
+
+                    <p>Transform your financial status for life, earning $300+ monthly—even as a beginner!
+                    </p>
+                    
+                    <a href="https://lovethpaul78.systeme.io/webinar" target="_blank"><button>Start</button>
+                    </a>
+            </blockquote>
+
+            <blockquote class="ad-blockquote">
+                    <ul class="ad-sidebar-top">
+                        <li>Smart ChatGPT with Web Access</li>
+                    </ul>
+
+                    <p>Write articles, AI painting, read
+                        articles & PDFs, summarize videos,
+                        enhance searches.
+                    </p>
+                    
+                    <a href="https://sider.ai/apps/lp-chatgpt?source=gg&p1=ai&p2=display&gad_source=5&gclid=EAIaIQobChMImaL2kra0iQMVsB1oCB1aBxlCEAEYASAAEgJ3gvD_BwE" target="_blank"><button>Open</button>
+                    </a>
+            </blockquote>
+
+            <blockquote class="ad-blockquote">
+                    <ul class="ad-sidebar-top">
+                        <li>Smart ChatGPT with Web Access</li>
+                    </ul>
+
+                    <p>Write articles, AI painting, read
+                        articles & PDFs, summarize videos,
+                        enhance searches.
+                    </p>
+                    
+                    <a href="https://sider.ai/apps/lp-chatgpt?source=gg&p1=ai&p2=display&gad_source=5&gclid=EAIaIQobChMImaL2kra0iQMVsB1oCB1aBxlCEAEYASAAEgJ3gvD_BwE" target="_blank"><button>Open</button>
+                    </a>
+            </blockquote>
+        </aside>
+
+    </main>
+
+
+    <!-- Footer section -->
+    <!-- <footer id="footer">
+        <div class="footer-container">
+             -->
+            <!-- Top section: Logo, Socials, Newsletter -->
+            <!-- <div class="footer-top"> -->
+                
+                <!-- Logo and description -->
+                <!-- <div class="verse-logo"> -->
+                    <!-- <img src="images/VERSE transparent logo black.png" alt="Verse Logo">  -->
+                    <!-- <span class="verse-logo-bottom-text">VERSE<i class="fa-solid fa-quote-right"></i></span>
+                    
+                    <p>
+                        Verse offers a user-friendly experience. <br>
+                        No account needed, <br>
+                        just verify you're human and start to verse. <br>
+                        Yoh! Verse it, you know!
+                    </p>
+                </div> -->
+                
+                <!-- Verse socials -->
+                <!-- <div class="verse-socials">
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                </div> -->
+                
+                <!-- Newsletter subscription form -->
+                <!-- <div class="newsletter-form">
+                    <form action="verse-newsletter-subscription-url" method="POST">
+                        <div class="consent-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">I consent to receive verse updates via email.</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Enter your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+            
+            <!-- Bottom section: Copyright, Developer, Policies -->
+            <!-- <div class="footer-bottom">
+                 -->
+                <!-- Copyright -->
+                <!-- <div class="copyright">
+                    &copy; 2026 Zed Technologies
+                </div> -->
+                
+                <!-- Development attribution -->
+                <!-- <div class="developer">
+                    <a href="https://www.linkedin.com/in/franklynakam" target="_blank">Developed by Frankie</a>
+                </div> -->
+                
+                <!-- Policies links -->
+                <!-- <div class="policies">
+                    <a href="terms-of-use.html" target="_blank">Terms of Use</a>
+                    <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                </div>
+
+            </div>
+        </div>
+    </footer> -->
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
