@@ -1,3 +1,15 @@
+// Temporary verification authentication
+const checkbox = document.getElementById('human-check'); // selecting the checkbox element
+
+    // an event listener for when the checkbox is clicked
+checkbox.addEventListener('change', function () {
+    if (this.checked) {
+        window.location.href = 'about.html'; // redirecting to about.html when the checkbox is ticked
+    }
+});
+
+
+
 // User photo preview
 document.getElementById('user-photo').addEventListener('change', function() {
     const file = this.files[0];
