@@ -819,11 +819,6 @@ h2 {
     color: #89fffd;
 }
 
-#post-verse-btn:disabled {
-    background-color: #b0d9f4;
-    cursor: not-allowed;
-}
-
 .verse-display h3 {
     font-size: 20px;
     color: #333;
@@ -832,38 +827,9 @@ h2 {
 }
 
 /* Display posted verses */
-/* #verses-container {
+#verses-container {
     margin-top: 20px;
-} */
-
-/* Pop-up styling */
-/* .popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
 }
-
-.popup-hidden {
-    display: none;
-}
-
-.popup button {
-    background-color: #fff;
-    color: #007bff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}  */
 
 /* .posted-verse {
     background-color: #fff;
