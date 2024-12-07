@@ -536,6 +536,15 @@ nav ul li i {
     color: transparent; */
 }
 
+a .verse-logo-top-text i {
+    transition: color 0.3s ease; /* Smooth color transition for the quote */
+    color: inherit; /* Inherits the text color */
+}
+
+a:hover .verse-logo-top-text i {
+    color: #89fffd; /* Changes color of the quote on hover */
+}
+
 .verse-logo a {
     text-decoration: none;
 }
