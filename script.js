@@ -105,6 +105,82 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// DOM Elements
+const postButton = document.getElementById("post-verse-btn");
+const usernameInput = document.getElementById("username-input");
+const verseInput = document.getElementById("verse-input");
+const charCounter = document.getElementById("char-counter");
+const versesContainer = document.getElementById("verses-container");
+const popup = document.getElementById("new-verses-popup");
+const loadNewVersesBtn = document.getElementById("load-new-verses-btn");
+
+// Load verses from localStorage
+let verses = JSON.parse(localStorage.getItem("verses")) || [];
+
+// Render verses
+function renderVerses() {
+    versesContainer.innerHTML = "";
+    verses.forEach(({ name, verse }, index) => {
+        const verseItem = document.createElement("div");
+        verseItem.classList.add("verse-item");
+        verseItem.innerHTML = `
+            <p>${verse}</p>
+            <div class="author">- ${name}</div>
+        `;
+        versesContainer.appendChild(verseItem);
+    });
+}
+
+// Enable/disable post button
+[usernameInput, verseInput].forEach((input) =>
+    input.addEventListener("input", () => {
+        postButton.disabled = !usernameInput.value.trim() || !verseInput.value.trim();
+    })
+);
+
+// Character counter
+verseInput.addEventListener("input", () => {
+    charCounter.textContent = `${verseInput.value.length}/300`;
+});
+
+// Add new verse
+postButton.addEventListener("click", () => {
+    const newVerse = {
+        name: usernameInput.value.trim(),
+        verse: verseInput.value.trim(),
+    };
+    verses.unshift(newVerse);
+    localStorage.setItem("verses", JSON.stringify(verses));
+    renderVerses();
+    usernameInput.value = "";
+    verseInput.value = "";
+    charCounter.textContent = "0/300";
+    postButton.disabled = true;
+});
+
+// Infinite scroll
+window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        renderVerses(); // Load more verses
+    }
+});
+
+// Simulate new verses
+setInterval(() => {
+    popup.classList.remove("popup-hidden");
+}, 10000);
+
+// Load new verses
+loadNewVersesBtn.addEventListener("click", () => {
+    popup.classList.add("popup-hidden");
+    renderVerses();
+});
+
+// Initial render
+renderVerses();
+
+
+
 
 
 
