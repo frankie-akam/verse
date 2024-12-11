@@ -49,6 +49,11 @@
         </div>
     </main>
     
+    <!-- Loading spinner -->
+<div id="loading-spinner" style="display: none;">
+    <i class="fa-solid fa-spinner fa-spin"></i> Please wait...
+</div>
+
     
     <!-- Temporary Internal JS -->
     <script>
@@ -59,9 +64,15 @@
         // an event listener for when the checkbox is clicked
         checkbox.addEventListener('change', function () {
             if (this.checked) {
+                alert('Verification Successful! Redirecting...'); // verification succesful alert
+
+                 // Add a slight delay (2 seconds) before redirecting
+                setTimeout(() => {
+                }, 2000); // 2 seconds delay
                 window.location.href = 'about.html'; // redirecting to about.html when the checkbox is ticked
             }
         });
+
     </script>
 
 
